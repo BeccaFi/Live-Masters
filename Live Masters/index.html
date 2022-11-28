@@ -238,20 +238,19 @@
         const ticketBtn = document.querySelector(".tickets");
         const eventBottom = document.querySelector(".event-bottom");
 
+        
+        
         dropdownBtn.addEventListener('click', (e) => {
         e.preventDefault();
         if(dropdown.style.display == 'none'){
             dropdown.style.display = 'block';
             ticketBtn.style.display = 'none';
             eventBottom.style.padding = '0';
-            dropdownBtn.style.display = 'transform: rotate(90deg)';
-
         }
         else{
             dropdown.style.display = 'none';
             ticketBtn.style.display = 'block'
             eventBottom.style.padding = '10px 0px';
-
         }
         })
     </script>

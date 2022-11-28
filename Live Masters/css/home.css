@@ -296,7 +296,7 @@ main .home-page .border {
   position: relative;
   background-color: rgb(255, 255, 255);
   color: black;
-  width: 200px;
+  width: 300px;
   z-index: 1000;
   margin: 0px auto;
 }
@@ -309,8 +309,9 @@ main .home-page .border {
   display: block;
 }
 .all-events .event .event-profile .event-bottom .more-info .dropdown-info .tkt-info {
-  width: 200px;
+  width: 300px;
   background-color: rgb(41, 60, 70);
+  font-size: 18px;
 }
 .all-events .event .event-profile .event-bottom .more-info .dropdown-info .tkt-info:hover {
   filter: brightness(150%);

@@ -366,7 +366,7 @@ main {
                             position: relative;
                             background-color: rgb(255, 255, 255);
                             color: black;
-                            width: 200px;
+                            width: 300px;
                             z-index: 1000;
                             margin: 0px auto;
                             
@@ -383,8 +383,9 @@ main {
                             }
 
                             .tkt-info {
-                                width: 200px;
+                                width: 300px;
                                 background-color: rgb(41, 60, 70);
+                                font-size: 18px;
 
                                 &:hover {
                                     filter: brightness(150%);
