@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/add.css">
+    <title>Add New Event</title>
+</head>
+<body>
+    <header class="header">
+        <img onclick="location.href='admin.html'" class="logo" src="./images/logo-black-white-thin.png" alt="Live Masters logo" width="7%" height="auto">
+        <div class="header-right">
+            <form class="search" autocomplete="off">
+            <input id="search-box" type="search" placeholder="Search...">
+            <button id="submit-search" type="submit"></button>
+            </form>
+            <div class="login">
+                <a class="sign-in" href="#">Sign in</a>
+                <div class="dropdown">
+                    <a href="#">User</a>
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="menu-nav">
+        <ul class="menu-links">
+            <div class="dash">
+                <img src="./Icons/dashboard.png" width="35px" height="35px" alt="Dashboard icon">
+                <li><a href="admin.html">Dashboard</a></li>
+            </div>
+            <div class="dash">
+                <img src="./Icons/add.png" width="35px" height="35px" alt="Add icon">
+                <li><a href="#">Add Event</a></li>
+            </div>
+            <div class="dash">
+                <img src="./Icons/graph.png" width="35px" height="35px" alt="Graph icon">
+                <li><a href="#">Statistics</a></li>
+            </div>
+            <div class="dash">
+                <img src="./Icons/schedule.png" width="35px" height="35px" alt="Schedule icon">
+                <li><a href="#">Schedule</a></li>
+            </div>
+        </ul>
+        <div class="dash-buttons">
+            <a href="index.html"><button class="dash-menu-btn logout-btn">Sign Out</button></a>
+            <a href="#"><button class="dash-menu-btn support-btn">Support</button></a>
+        </div>
+    </nav>
+
+
+   <form class="add-event-form">
+    <h3>Add New Event</h3>
+    <div class="input-field">
+        <label for="title">Title</label>
+        <input type="text" id="title" required>
+    </div>
+        <br>
+    <div class="input-field">
+        <label for="categories">Choose category</label>
+        <select name="categories" id="categories" required>
+            <optgroup label="Music">
+                <option value="3">HipHop</option>
+                <option value="4">Pop</option>
+                <option value="2">Rock</option>
+                <option value="">Electronic</option>
+                <option value="">Festival</option>
+                <option value="">Orchestra</option>
+            </optgroup>
+            <optgroup label="Entertainment">
+                <option value="6">Dance</option>
+                <option value="1">Standup</option>
+                <option value="">Theatre</option>
+                <option value="">Horror</option>
+            </optgroup>
+            <optgroup label="Family">
+                <option value="5">Family</option>
+                <option value="">Puppets</option>
+            </optgroup>
+        </select>
+    </div>
+
+        <br>
+        
+        <br>
+    <div class="input-field">
+        <label for="thumbnail">Thumbnail</label>
+        <input type="file" id="thumbnail" name="thumbnail" required>
+    </div>
+        
+        <br>
+    <div class="input-field">
+        <fieldset>
+        <label for="pictures">Upload Pictures</label>
+        <br>
+        <input type="file" id="pictures" name="pictures">
+        <input type="file" id="pictures" name="pictures">
+        <input type="file" id="pictures" name="pictures">
+        <input type="file" id="pictures" name="pictures">
+        </fieldset>
+    </div>
+
+        <br>
+    <div class="input-field">
+        <label for="date">Date / Time</label>
+        <input type="datetime-local" id="date" name="date" required>
+    </div>
+        <br>
+    <div class="input-field">
+        <label for="short-info">Short info</label>
+        <textarea name="short-info" id="short-info" cols="30" rows="3" required></textarea>
+    </div>
+        <br>
+    <div class="input-field">
+        <label for="long-info">Long info</label>
+        <textarea name="long-info" id="long-info" cols="30" rows="5" required></textarea>
+    </div>
+        <br><br>
+        <input id="submit" type="submit" value="Add Event">
+
+        <div class="uploading">
+            <h3>Thank you!</h3>
+            <p>The event has been uploaded to the website</p>
+            <center>
+            <img src="./Icons/done.png" width="200px" height="200px" alt="checkmark">
+        </center>
+        <center>
+            <button type="submit" id="ok-btn">Ok</button>
+        </center>
+        </div>
+   </form>
+
+
+<script>
+const addForm = document.querySelector(".add-event-form");
+const submit = document.getElementById("submit");
+const addedCon = document.querySelector(".uploading");
+const ok = document.getElementById("ok-btn");
+
+
+
+
+submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    addedCon.style.display = 'block';
+})
+
+
+ok.addEventListener('click', (e) => {
+    addedCon.style.display = 'none';
+})
+
+
+</script>
+
+</body>
+</html>i

@@ -1,0 +1,464 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  min-height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+}
+
+li, a, button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  padding: 10px 3%;
+  background-color: #060606;
+}
+.header .logo {
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+  top: 0;
+}
+.header .header-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 34px;
+}
+.header .header-right .search {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid purple;
+  border-radius: 50px;
+  background-color: white;
+  padding: 4px 4px;
+}
+.header .header-right .search input {
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background: transparent;
+  padding: 2px;
+  font-size: 16px;
+}
+.header .header-right .search input::-webkit-search-cancel-button {
+  display: none;
+}
+.header .header-right .search input::placeholder {
+  font-size: 14px;
+}
+.header .header-right .search #submit-search {
+  background: transparent;
+  background-image: url("/Icons/search.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  margin-right: 2px;
+  background-position: center;
+  padding: 10px;
+  border: none;
+}
+.header .header-right .search #submit-search:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.header .header-right .login {
+  position: relative;
+  display: inline-block;
+}
+.header .header-right .login a {
+  text-decoration: none;
+}
+.header .header-right .login .dropdown {
+  display: none;
+  position: absolute;
+  background-color: rgb(13, 26, 33);
+  min-width: 20px;
+  z-index: 999;
+}
+.header .header-right .login .dropdown a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.header .header-right .login .dropdown a:hover {
+  background-color: rgb(41, 60, 70);
+}
+.header .header-right .login:hover .dropdown {
+  display: block;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 3%;
+  background-color: rgb(80, 38, 119);
+  width: 100%;
+  height: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.menu-nav .menu-links {
+  list-style: none;
+}
+.menu-nav .menu-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.menu-nav .menu-links li a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+.menu-nav .menu-links li a:hover {
+  color: #5AB9FD;
+}
+
+.contact-btn {
+  margin: 0px 50px 0px 20px;
+  padding: 4px 16px;
+  background-color: rgb(77, 77, 77);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.contact-btn:hover {
+  filter: brightness(150%);
+}
+
+h1 {
+  text-align: center;
+  width: 25%;
+  margin: 2rem auto;
+  color: rgb(115, 115, 115);
+}
+
+.border {
+  width: 150px;
+  height: 10px;
+  background: rgba(80, 38, 119, 0.7);
+  margin: 20px auto;
+}
+
+.about-1 {
+  background-color: rgb(194, 243, 243);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100vw;
+  margin-bottom: 3rem;
+}
+.about-1 .about {
+  width: 700px;
+}
+.about-1 .about h2 {
+  color: black;
+  margin-bottom: 1rem;
+}
+.about-1 .about h2 span {
+  color: purple;
+}
+.about-1 .about p {
+  color: rgb(115, 115, 115);
+}
+.about-1 .about button {
+  background-color: purple;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 6rem;
+  margin-left: 18rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.about-1 .about button:hover {
+  filter: brightness(130%);
+}
+.about-1 img {
+  border-radius: 10px;
+}
+
+.team {
+  background-color: rgb(243, 219, 247);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 100vw;
+  margin-bottom: 3rem;
+}
+.team .about-team {
+  width: 700px;
+}
+.team .about-team h2 {
+  color: black;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.team .about-team h2 span {
+  color: purple;
+}
+.team .about-team p {
+  color: rgb(115, 115, 115);
+}
+.team .team-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.team .team-images .member-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px rgb(174, 174, 174);
+}
+.team .team-images .member-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.team .team-images .member-info {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.team .team-images .member-info h3 {
+  margin-bottom: 1rem;
+  color: rgb(34, 96, 48);
+}
+.team .team-images .member-info p {
+  color: grey;
+}
+
+.founder {
+  background-color: rgb(243, 240, 194);
+  padding: 2rem;
+  width: 100vw;
+  margin-bottom: 3rem;
+}
+.founder .about-founder {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.founder .about-founder .ceo {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.founder .about-founder .ceo .ceo-border {
+  width: 150px;
+  height: 6px;
+  background: rgba(80, 38, 119, 0.7);
+  margin: 14px auto;
+}
+.founder .about-founder .ceo .founder-contact-card {
+  text-align: center;
+  width: 350px;
+  padding: 12px;
+}
+.founder .about-founder .ceo .founder-contact-card b {
+  font-size: 14px;
+}
+.founder .about-founder .ceo .founder-contact-card a {
+  color: grey;
+  text-decoration: none;
+}
+.founder .about-founder .ceo .founder-contact-card .ceo-contact-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+}
+.founder .about-founder .ceo .founder-contact-card .ceo-contact-container .ceo-contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.founder .about-founder .ceo .founder-contact-card .ceo-contact-container .ceo-contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+.founder .about-founder .founder-info {
+  width: 680px;
+  text-align: center;
+  border-left: 1px solid grey;
+  padding: 12px;
+}
+.founder .about-founder .founder-info h2 {
+  color: black;
+  margin-bottom: 1rem;
+}
+.founder .about-founder .founder-info h2 span {
+  color: purple;
+}
+.founder .about-founder .founder-info p {
+  color: rgb(115, 115, 115);
+}
+
+#about-contact-btn {
+  background-color: purple;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+#about-contact-btn:hover {
+  filter: brightness(130%);
+}
+
+.footer-container {
+  background-color: black;
+  height: calc(100% - 49vh);
+  width: 100%;
+  margin: 46px 0px 0px 0px;
+  position: absolute;
+}
+.footer-container .footer-contact {
+  margin-left: 2rem;
+  top: 0;
+}
+.footer-container .footer-contact h3 {
+  color: #5AB9FD;
+  margin-bottom: 1rem;
+}
+.footer-container .footer-content {
+  top: 0;
+  gap: 34px;
+}
+.footer-container .footer-content .footer-heading h3 {
+  color: #5AB9FD;
+  margin-bottom: 1rem;
+}
+.footer-container .footer-content .footer-heading a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer-container .footer-content .footer-heading a:hover {
+  color: #5AB9FD;
+  transition: 0.3s ease-out;
+}
+.footer-container .footer-content .footer-heading p {
+  color: white;
+}
+.footer-container .footer-content .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 32.5% 0px 34.5%;
+  top: 0;
+  position: absolute;
+}
+.footer-container .footer-content .newsletter h2 {
+  color: #5AB9FD;
+  margin-bottom: 0;
+}
+.footer-container .footer-content .newsletter p {
+  margin-bottom: 1rem;
+  width: 500px;
+}
+.footer-container .footer-content .newsletter #email-input {
+  border-radius: 6px;
+  border: none;
+  background-image: url(/Icons/mail.black.png);
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: 5%;
+  padding: 10px 40px;
+  outline: none;
+  width: 200px;
+  margin-bottom: 1rem;
+}
+.footer-container .footer-content .newsletter #subscribe {
+  color: black;
+  width: 100px;
+  background-color: #5AB9FD;
+  border-radius: 4px;
+  border: none;
+  margin-left: 0.5rem;
+  padding: 8px;
+}
+.footer-container .footer-content .newsletter #subscribe:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.footer-container .footer-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 4rem;
+  margin-right: 8rem;
+}
+.footer-container .copyright {
+  color: white;
+  bottom: 0;
+  position: absolute;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.footer-container .follow {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-container .follow h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+.footer-container .follow-icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  bottom: 0;
+}
+.footer-container .follow-icons img {
+  background-color: rgb(143, 48, 194);
+  border-radius: 50%;
+  padding: 6px;
+}
+.footer-container .follow-icons img:hover {
+  filter: brightness(150%);
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+/*# sourceMappingURL=about.css.map */

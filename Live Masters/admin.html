@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <header class="header">
+        <img onclick="location.href='admin.html'" class="logo" src="./images/logo-black-white-thin.png" alt="Live Masters logo" width="7%" height="auto">
+        <div class="header-right">
+            <form class="search" autocomplete="off">
+            <input id="search-box" type="search" placeholder="Search...">
+            <button id="submit-search" type="submit"></button>
+            </form>
+            <div class="login">
+                <a class="sign-in" href="#">Sign in</a>
+                <div class="dropdown">
+                    <a href="#">User</a>
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="menu-nav">
+        <ul class="menu-links">
+            <div class="dash">
+                <img src="./Icons/dashboard.png" width="35px" height="35px" alt="Dashboard icon">
+                <li><a href="admin.html">Dashboard</a></li>
+            </div>
+            <div class="dash">
+                <img src="./Icons/add.png" width="35px" height="35px" alt="Add icon">
+                <li><a href="add.html">Add Event</a></li>
+            </div>
+            <div class="dash">
+                <img src="./Icons/graph.png" width="35px" height="35px" alt="Graph icon">
+                <li><a href="#">Statistics</a></li>
+            </div>
+            <div class="dash">
+                <img src="./Icons/schedule.png" width="35px" height="35px" alt="Schedule icon">
+                <li><a href="#">Schedule</a></li>
+            </div>
+        </ul>
+        <div class="dash-buttons">
+            <a href="index.html"><button class="dash-menu-btn logout-btn">Sign Out</button></a>
+            <a href="#"><button class="dash-menu-btn support-btn">Support</button></a>
+        </div>
+    </nav>
+
+
+    <div class="dashboard">
+        <div onclick="location.href='add.html'" class="on-dash add-event">
+            <h2>Add Event</h2>
+            <img src="./Icons/add-big.png" width="120px" height="120px" alt="Add button">
+        </div>
+        <div class="on-dash">
+            <h2>Statistics</h2>
+            <img src="./Icons/color-chart.png" width="120px" height="120px" alt="Statistics Chart">
+        </div>
+        <div class="on-dash">
+            <h2>Schedule</h2>
+            <img src="./Icons/color-schedule.png" width="120px" height="120px" alt="Schedule pic">
+        </div>
+    </div>
+ 
+</body>
+</html>i
