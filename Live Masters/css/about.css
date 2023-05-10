@@ -346,8 +346,8 @@ h1 {
   position: absolute;
 }
 .footer-container .footer-contact {
-  margin-left: 2rem;
-  top: 0;
+  margin: -1rem auto 0 2rem;
+  width: 200px;
 }
 .footer-container .footer-contact h3 {
   color: #5AB9FD;
@@ -373,6 +373,12 @@ h1 {
 .footer-container .footer-content .footer-heading p {
   color: white;
 }
+
+/* .middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
 .footer-container .footer-content .newsletter {
   display: flex;
   flex-direction: column;
@@ -383,7 +389,7 @@ h1 {
 }
 .footer-container .footer-content .newsletter h2 {
   color: #5AB9FD;
-  margin-bottom: 0;
+  margin-bottom: 0.3rem;
 }
 .footer-container .footer-content .newsletter p {
   margin-bottom: 1rem;
@@ -430,15 +436,17 @@ h1 {
   bottom: 0;
   position: absolute;
   margin-left: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
-.footer-container .follow {
+.footer-container .middle .follow {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  margin-top: 2rem;
 }
-.footer-container .follow h3 {
+.footer-container .middle .follow h3 {
   color: white;
   margin-bottom: 1rem;
 }
