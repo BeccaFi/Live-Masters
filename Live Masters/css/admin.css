@@ -146,7 +146,7 @@ li, a, button {
 }
 .dash-buttons .dash-menu-btn {
   padding: 4px 16px;
-  background-color: rgb(77, 77, 77);
+  background-color: rgb(47, 15, 76);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -162,6 +162,7 @@ li, a, button {
 .dash-buttons .logout-btn:hover {
   filter: brightness(150%);
 }
+
 .dash-buttons .support-btn:hover {
   filter: brightness(150%);
 }
